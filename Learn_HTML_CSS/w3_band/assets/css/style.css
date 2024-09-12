@@ -1,0 +1,235 @@
+/* reset css */
+
+* { 
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* 
+1. từ ngoài vào trong
+2. từ trên xuống dưới
+3. tổng quan đến chi tiết
+
+ */
+
+/* 
+tính chất thẻ li là list item (nằm chồng nhau lên) */
+
+/* 
+1. vị trí
+2. kích thước (width height)
+3. màu sắc
+4. hình dánh, kiểu dáng */
+.text-white { 
+    color:white !important;
+
+}
+
+#main {
+
+
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#header {
+    height: 46.5px;
+    background-color: #000;
+    top: 0;
+    left:0;
+    position: fixed; 
+    right: 0;
+    z-index: 1; /*khi scroll hình không bị chèn lên trên header*/
+}
+
+#header .search-btn {
+    float:right; /*ddeer kính lúp lôi về bên phải, mất  tính chyas block *kế thừa chiều ngang)*/
+    padding: 0px 21px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 15px;
+
+}
+
+#header .search-btn:hover {
+    background-color: #f44336;
+
+}
+
+#header .search-icon { 
+    color: #fff;
+    font-size: 20px;
+    line-height: 46.5px;
+}
+
+
+
+#nav {
+    display: inline-block; /*để chiều ngang của thẻ nav không bị thừa*/
+}
+
+.ti-angle-down {
+    font-size: 10px;
+}
+
+#nav, .subnav { 
+    list-style-type: none; /*set không có đánh dấu cho list */
+}
+
+#nav > li {
+    display: inline-block
+}
+
+#nav li {
+    position: relative;
+    /* width: 100%; */
+     /*chỗ nào cần tác động thì tác động thành block, vd như thẻ li này */
+}
+
+#nav > li > a {
+    color: #fff;
+    text-transform: uppercase; /*cứ viết thường, yêu cầu viết hoa thì viết hoa */
+}
+
+#nav li a{ 
+    color: #fff;
+    text-decoration: none;
+    line-height: 46.5px; /*sử dụng thằng này set thẳng chiều cao vào thẻ a, không cần vào thẻ li */
+    padding: 0px 24px;
+    display: block; /*dùng block để tránh set kích thước */
+}
+
+#nav > li:hover > a, 
+#nav .subnav li:hover  { /*khoong dí vào thẻ a, tránh subnav bị lỗi */
+    background-color: #ccc;
+    color: black;
+    display: block;
+    /* set cái inline-block cho thẻ để có kcihs thước, lúc đó hover sẽ thành công */
+}
+
+
+#nav .subnav { 
+    background-color: #fff;
+    position: absolute; /*vì subnav vhinhs là con của thẻ More nên cho position bằng absolute */
+}
+
+#nav .subnav a { 
+    color: #000;
+}
+
+
+
+
+
+#slider {
+    background-color: #333;
+    padding-top: 50%;
+    margin-top: 46px; /*theme vào chỗ này để tránh vbij đề do postion = fixed của thanh header*/
+    background: url('/Learn_HTML_CSS/w3_band/assets/img/chicago.jpg') top center / cover no-repeat;
+    position: relative; /*thangwf này phụ thuộc thằng kia -> relative và absolute*/
+}
+
+
+
+#slider .text-content {
+    position: absolute;
+    bottom: 0;
+    color: #fff;
+    bottom: 47px;
+    width: 100%;
+    /* right: 0;
+    left: 0; */
+    /*C1: 
+    left: 50%;
+    transform: translateX(-50%); */
+     /*cos hai cách, c1 sử dụng left và transform + translate
+    c2 sử dụng width 100%
+    c3: right = 0 và left = 0 
+    cả 2 cách sử dụng text - align 100 % 
+    */
+    text-align: center;
+} 
+
+#slider .text-heading {
+    font-weight: 500; /*giao ddoonjg từ 200 đến 700 (đượcc gọi là dodooj dày của chữ*/
+    font-size: 24px;
+    margin-bottom: 25px;
+} 
+
+#slider .text-description {
+    font-size: 15px;
+    /* margin-top: 25px; */ /*margin top haowjc bottom deu duoc*/
+
+} 
+
+#content {
+
+
+}
+
+#content .content-section {
+    width: 800px;
+    margin-left:auto;
+    margin-right: auto;
+    padding: 64px 16px;
+}
+
+#content .section-heading {
+    font-size: 30px;
+
+}
+
+#content .section-sub-heading{
+    font-size: 15px;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    font-style: italic;
+    font-family: sans-serif;
+    opacity: 0.6;
+}
+
+#content .section-heading,
+#content .section-sub-heading {
+    text-align: center;
+}
+
+#content .about-text {
+    text-align: justify;
+    line-height: 1.6;
+}
+
+#content .member-list{ 
+    margin-top: 48px;
+}
+
+
+
+#content .member-item {
+    float:left;
+    
+    width: 33.333%;
+}
+
+
+.tour-section {
+    background-color: #000;
+}
+
+.tickets-list {
+    background-color: white;
+    width: 766px;
+    height: 105px;
+    margin-right: 0;
+    margin-left: 0;
+    text-align: justify;
+}
+
+
+
+
+#footer {
+
+
+}
