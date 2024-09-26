@@ -4,22 +4,26 @@ using namespace std;
 int main()
 {
     int n; cin >> n;
-    int max1(0);int max2(0);
     int p; cin >> p;
-    while (p!=0)
+    int a[p]; int b[p];
+    int maxa = 0;
+    int maxb = 0;
+    for (int i = 0; i < p; i++)
     {
-        int a; cin >> a;
-        if (a>max1) max1=a;
-        --p;
+        cin >> a[i];
+        if (a[i] >= maxa) maxa = a[i];
     }
-    int q; cin >> q;
-    while (q!=0)
+    for (int i = 0; i < p; i++)
     {
-        int b; cin >> b;
-        if (b>max2) max2=b;
-        --q;
+        cin >> b[i];
+        if (b[i] >= maxb) maxb = b[i];
     }
-    
-    if ((max1==n) || (max2==n)) cout <<"I become the guy."; else cout <<"Oh, my keyboard!";    
+    // cout << maxa << " " << maxb << endl;
+    if (maxa == maxb) { 
+        if (maxa <= n) cout << "Oh, my keyboard!"<<endl; else cout << "I become the guy." <<endl;
+    } else
+    {
+        if ((maxa >= n) || (maxb >= n)) cout << "I become the guy." <<endl; else cout << "Oh, my keyboard!"<<endl;
+    }   
     return 0;
 }

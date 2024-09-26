@@ -1,25 +1,28 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int main(int argc, char const *argv[])
+int main()
 {
-    int t; cin >> t;
-    while (t!=0)
+    int n; cin >> n;
+    int a[n];
+    int indexMax = 0; int max = 0;
+    int indexMin = 0; int min = 100;
+    for (int i = 0; i < n; i++)
     {
-        int n; cin >> n;
-        int a[n];
-        long long sum = 0;
-        for (int i = 0; i < n; i++)
-        {
-            cin >> a[i];
-            if (i % 2 == 0) sum -= a[i]; else sum += a[i];
+        cin >> a[i];
+        if (a[i] >= max) {
+            max = a[i];
+            indexMax = i;
         }
-        
-        
-    cout << sum << endl;
-
-        --t;
+        if (a[i] <= min) {
+            min = a[i];
+            indexMin = i;
+        }
     }
-    
+
+    int count = 0;
+    if (indexMax < indexMin) count = indexMax + n - indexMin - 1; else count = indexMax + n - (indexMin + 2);
+    cout << count << endl;
+    // cout << indexMax << " " << indexMin << endl;
     return 0;
 }
