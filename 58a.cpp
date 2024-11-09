@@ -11,16 +11,8 @@ int main()
     if (s[j]==st[i]) ++j;
     //cout << j;
     if (j==5) cout << "YES"<<endl; else cout << "NO" <<endl;
-    
-    
-    
-    
-    
-    
-    
-    
-   
-    
 
+    
+    
     return 0;
 }

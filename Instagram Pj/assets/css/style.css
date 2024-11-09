@@ -24,7 +24,8 @@ html {
     padding: 0;
     margin: 0;
     background-color: #0a0a0a;
-    font-family: sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
+    height: 100%;
 
 }
 
@@ -81,6 +82,28 @@ body {
 .log-in-btn:hover {
     cursor:pointer;
 }
+
+.add-plus {
+    width: 80px;
+    height: 66px;
+    position: absolute;
+    right: 10px; 
+    bottom: 10px;
+    background-color: white;
+    color: #000000;
+    border: 1px;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.add-plus:hover {
+
+}
+
+
 .navbar__primary {
     display: flex;
     justify-content: space-between;
@@ -104,7 +127,7 @@ body {
 .navbar__primary--icon:hover {
     background-color: rgb(30, 30, 30);
     cursor: pointer;
-    color: red;
+    color: grey;
 }
 
 
@@ -247,6 +270,7 @@ body {
     flex-direction: row ;
     justify-content: space-between;
     align-items: center;
+    width: 560px;
 }
 
 .profile__name {
