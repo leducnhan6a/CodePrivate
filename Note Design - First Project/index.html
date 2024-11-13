@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Note Design - First Project</title>
+    <link rel="icon" href="https://scontent.fsgn21-1.fna.fbcdn.net/v/t39.30808-6/422215088_2369235126798236_2152110073637481844_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeHGORKXmJuF4mW1zwOiw8JMcYv65XD1QHxxi_rlcPVAfMwVbMtDnCG_Kk5h36bX4HRykuLTGcC7JN6_XK-1lo3Y&_nc_ohc=PVd_tYBOHdcQ7kNvgFtsGjy&_nc_zt=23&_nc_ht=scontent.fsgn21-1.fna&_nc_gid=A8HyUZdnfjgxO83y8wHMMqd&oh=00_AYD8LEYaHV7TXSO9g-2iUkaN2gtEwzvMz2yGQy6zdCxiUw&oe=6738F078">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reseter.css/2.0.0/reseter.min.css" integrity="sha512-gCJkkUMGTe73+FMwog6gIBCVJIMXRoc21l6/IPCuzxCex/1sxvO8ctb6Zd4/WWs2UMqmtnDrAdhJht5pEY0LXg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <div id="app">
+        <!-- Clock + Weather Station (Forecast) -->
+    <div id="forecast">
+        <!-- clock element -->
+        <div class="clock">
+            <p class="currentDate">Tuesday, 12 November</p>
+            <h1 class="currentTime">14:26</h1>
+            <span class="leftTask">U have 0 task today</span>
+        </div>
+
+        <!-- weather element -->
+        <div class="weather">
+            <div class="weather__location">
+                <h4 class="weather__city">Di An City</h4>
+                <h2 class="weather__temperature">32 degs</h2>
+            </div>
+            
+            <div class="weather__status">
+                <i class="fa-regular fa-sun"></i>
+                <span>Mostly Sunny</span>
+                <div class="weather__status__amplitude">
+                    <span class="amplitude__max">H: 32</span>
+                    <span class="amplitude__min">L: 21</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Search bar -->
+    <div id="search">
+        <i class="fa-solid fa-magnifying-glass look-up"></i>
+        <input type="search" name="search__bar" class="search__bar" placeholder="Search for task">
+    </div>
+
+
+    <!-- Status Bar -->
+    <div id="status">
+        <div class="status__on--going">
+            <i class="fa-solid fa-rectangle-list"></i>
+            <span>On going</span>
+        </div>
+        <div class="status__completed">
+            <i class="fa-solid fa-check-double"></i>
+            <span>Completed</span>
+        </div>
+        
+    </div>
+
+    <!-- Task block -->
+    <div class="task task-1" >
+        <div class="task__activity">
+            <input type="radio" class="checkbox">
+            <i class="fa-regular fa-calendar"></i>
+        </div>
+
+        <div class="task__details">
+            <h2 class="task__title">Website Development</h2>
+            <p class="task__description">Create a landing page with React.js for client</p>
+        </div>
+
+        <div class="task__options">
+            <i class="fa-solid fa-bars bar" ></i>
+            <ul class="task__editor">
+                <li>Edit</li>
+                <li>Set icon</li>
+                <li>Delete</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="task task-2">
+        <div class="task__activity">
+            <input type="radio" class="checkbox">
+            <i class="fa-regular fa-calendar"></i>
+        </div>
+
+        <div class="task__details">
+            <h2 class="task__title">Work out</h2>
+            <p class="task__description">Go to gym</p>
+        </div>
+
+        <div class="task__options">
+            <i class="fa-solid fa-bars bar" ></i>
+            <ul class="task__editor">
+                <li>Edit</li>
+                <li>Set icon</li>
+                <li>Delete</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="task task-3">
+        <div class="task__activity">
+            <input type="radio" class="checkbox">
+            <i class="fa-regular fa-calendar"></i>
+        </div>
+
+        <div class="task__details">
+            <h2 class="task__title">Tên task</h2>
+            <p class="task__description">Đây là description</p>
+        </div>
+
+        <div class="task__options">
+            <i class="fa-solid fa-bars bar" ></i>
+            <ul class="task__editor">
+                <li>Edit</li>
+                <li>Set icon</li>
+                <li>Delete</li>
+            </ul>
+        </div>
+    </div>
+
+    
+
+    <!-- add-new-task button -->
+    <div id="add-new-task">
+        <span>+</span>
+    </div>
+
+
+    </div>
+
+    
+
+    
+
+    <script src="./main.js"></script>
+</body>
+</html>

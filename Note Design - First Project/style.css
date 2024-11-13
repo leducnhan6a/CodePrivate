@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+body {
+    display:flex;
+    color: white;
+    font-weight: 600;
+    background-color: #003161;
+    appearance :none;
+}
+
+
+#app {
+    margin: auto; 
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 10px;
+    animation: fade 1s ease;
+}
+
+
+
+/* start: forecast */
+#forecast {
+    display:flex;
+    padding: 10px 10px;
+    gap: 10px;
+}
+
+.clock{
+    padding: 5px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border: 3px solid grey;
+    border-radius: 20px;
+}
+
+.weather {
+    padding: 5px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 3px solid grey;
+    border-radius: 20px;
+}
+
+
+/* search bar */
+#search{
+    margin: 10px 10px;
+    display: flex;
+    align-items: center;
+    line-height: 30px;
+    border: 3px solid grey;
+    border-radius: 20px;
+    padding: 5px 10px;
+}
+
+.look-up{
+    width: 30px;
+
+}
+
+
+.search__bar {
+    flex: 1;
+    border: none;
+    text-align: left;
+    color: white;
+    background-color: transparent;
+    text-align: left;
+    height: 32px;
+    width: 32px;
+    align-content: center;
+}
+
+
+
+.search__bar:focus { 
+
+    outline: none;
+    /* out line = none  */
+}
+
+
+/* start status */
+#status {
+    cursor: pointer;
+    display: flex;
+    border: 2px solid;
+    border-radius: 20px;
+    line-height: 30px;
+    margin: 10px 10px;
+    justify-content: space-around;
+}
+
+.status__on--going,
+.status__completed {
+    text-align: center;
+}
+
+.status__completed {
+    border-left: 3px black;
+}
+
+
+
+/* start task */
+.task {
+    cursor: pointer;
+    margin: 0 10px 10px;
+    line-height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 3px solid grey;
+    border-radius: 20px;
+    margin-top: 10px;
+}
+
+.task__activity {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    row-gap: 10px;
+    flex: 0.5;
+    
+}
+
+
+
+.task__details {
+    flex: 5;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 0 6px;
+}
+
+.task__description {
+    font-weight: 500;
+}
+
+.task__editor {
+    flex: 0.5;
+}
+
+.task__editor li { 
+    display: none;
+    list-style-type: none;;
+}
+
+.task__options { 
+    flex: .5;
+    cursor: pointer;
+    display: flex;
+    margin-right: 5px;
+}
+
+.task__options .bar {
+    width: 32px;
+    height: 32px;
+    text-align: center;
+    align-content: center;
+    font-size: 10px;
+
+}
+
+
+
+
+
+.task__options:hover { 
+    background-color: grey;
+    border-radius: 50%;
+    animation: fade .5s forwards;
+}
+
+
+
+/* start addnewtask */
+#add-new-task {
+    background-color: grey;
+    line-height: 50px;
+    width: 50px;
+    font-size: 25px;
+    text-align: center;
+    display: block;
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+    border-radius: 15px;
+}
+
+#add-new-task:hover {
+    cursor: pointer;
+    animation: scale ease 0.2s forwards;
+}
+
+
+
+
+
+
+.clock,
+.weather,
+#status,
+.task {
+    background-color:  #170679;
+}
+
+.task-1 { 
+    background-color: #B624FF;
+    box-shadow: #cd7bf7 3px 3px 3px 3px;
+
+
+}
+
+
+
+.task-2 { 
+    background-color: #FF69B4 ;
+    box-shadow: #db94b8 3px 3px 3px 3px;
+    
+}
+
+ 
+
+.task-3 { 
+    background-color: #3DFF7F ;
+    box-shadow: #73f9a0 3px 3px 3px 3px;
+
+}
+
+.task-1:hover,
+.task-2:hover,
+.task-3:hover {
+    animation: taskScale .3s ease forwards;
+}
+
+ 
+
+
+/* animatiom  */
+@keyframes scale { 
+    from { 
+        scale: 1;
+    }
+    to {
+        scale: 1.2;
+    }
+}
+
+@keyframes taskScale {
+    from {
+        scale: 1;
+    }
+    to {
+        scale: 1.025;
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .3;
+    }
+    to { 
+        opacity: 1;
+    }
+}
